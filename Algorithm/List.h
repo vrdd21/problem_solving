@@ -178,7 +178,6 @@ inline void List<T>::remove_back()
 	}
 	else if (head == tail)
 	{
-		cout << "head == tail" << endl;
 		ListNode<T>* p = head;
 		head = nullptr;
 		tail = nullptr;

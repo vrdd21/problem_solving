@@ -1,18 +1,22 @@
 #include <iostream>
 #include "List.h"
+#include "stack.h"
+#include "queue.h"
 using namespace std;
 
 
 int main(void)
 {
-	List<int> a;
+	Queue<int> q;
 
-	a.push_back(1);
-	a.push_back(2);
-	a.push_front(12);
-	a.remove_back();
+	for (int i = 0; i < 10; i++)
+		q.enqueue(i);
 
-	cout << a.peek_back() << endl;
-	cout << a.peek_front() << endl;
+	while (!q.empty())
+	{
+		cout << q.dequeue() << endl;
+	}
+
+	cout << "end" << endl;
 	return 0;
 }
